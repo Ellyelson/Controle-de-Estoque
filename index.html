@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Controle de Estoque</h1>
+    <button onclick="logout()">Logout</button>
+    <form id="productForm" style="display:none;">
+        <input type="text" id="productName" placeholder="Nome do Produto" required>
+        <input type="text" id="productBrand" placeholder="Marca do Produto" required>
+        <input type="date" id="productExpiry" placeholder="Data de Validade" required>
+        <input type="number" id="productQuantity" placeholder="Quantidade" required min="1">
+        <button type="submit">Adicionar Produto</button>
+    </form>
+    <button id="saveChanges" style="display:none;" onclick="saveProducts()">Salvar Alterações</button>
+    <div id="alert"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Validade</th>
+                <th>Quantidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="productList">
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
